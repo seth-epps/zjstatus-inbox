@@ -1,0 +1,13 @@
+[package]
+name = "zjstatus-inbox"
+version = "0.0.1"
+edition = "2021"
+description = "Zellij 0.46+ plugin that pipes Inbox attention/idle counts to zjstatus and provides a subtle bottom-right pop-over"
+
+[dependencies]
+zellij-tile = "0.46.0"
+
+[profile.release]
+opt-level = "s"
+lto = true
+strip = true

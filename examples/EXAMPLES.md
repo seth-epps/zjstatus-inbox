@@ -1,0 +1,24 @@
+# Examples
+## Basic
+```kdl
+layout {
+    default_tab_template {
+        children
+        pane size=1 borderless=true {
+            plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
+
+                format_left   "#[bold]{mode} [#[italic]{session}] "
+                format_center " {tabs} "
+                format_right  "{pipe_inbox} {datetime} "
+
+                pipe_inbox_format     "{output}"
+                pipe_inbox_rendermode "dynamic"
+
+                datetime        "#[fg=#6C7086,bold] {format} "
+                datetime_format "%Y %b %d %H:%M"
+            }
+        }
+    }
+}
+```
+![zjstatus-basic](zjstatus-basic.png)
